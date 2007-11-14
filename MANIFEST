@@ -8,3 +8,4 @@ t/basic.t
 t/perlcritic.t
 t/pod-coverage.t
 t/pod.t
+Makefile.PL
