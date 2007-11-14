@@ -6,10 +6,12 @@ use warnings;
 our $VERSION = '0.01';
 our $AUTHORITY = 'cpan:DROLSKY';
 
-use constant attribute_metaclass => 'MooseX::Policy::SemiAffordanceAccessor::Attribute';
+use constant attribute_metaclass =>                        ## no critic ProhibitConstantPragma
+    'MooseX::Policy::SemiAffordanceAccessor::Attribute';
 
 
-package MooseX::Policy::SemiAffordanceAccessor::Attribute;
+package MooseX::Policy::SemiAffordanceAccessor::Attribute; ## no critic ProhibitMultiplePackages
+
 
 use Moose;
 
@@ -72,6 +74,9 @@ accessor, while set methods are prefixed with "set_".
 
 If you define an attribute with a leading underscore, then the set
 method will start with "_set_".
+
+If you explicitly set a "reader" or "writer" name when creating an
+attribute, then this policy skips that attribute.
 
 The name "semi-affordance" comes from David Wheeler's Class::Meta
 module.
