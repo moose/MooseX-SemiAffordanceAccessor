@@ -9,6 +9,7 @@ my $builder = Module::Build->new
     ( module_name        => 'MooseX::Policy::SemiAffordanceAccessor',
       license            => 'perl',
       requires           => { 'Moose'         => 0,
+                              'Moose::Policy' => 0,
                             },
       build_requires     => { 'Test::More' => 0,
                             },

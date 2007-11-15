@@ -3,7 +3,7 @@ package MooseX::Policy::SemiAffordanceAccessor;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 our $AUTHORITY = 'cpan:DROLSKY';
 
 use constant attribute_metaclass =>                        ## no critic ProhibitConstantPragma
