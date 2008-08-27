@@ -1,3 +1,9 @@
+0.03
+
+- Renamed to MooseX::SemiAffordanceAccessor because it no longer
+  requires the Moose::Policy module.
+
+
 0.02   2007-11-15
 
 - Require 5.6.1 in the Build.PL.
