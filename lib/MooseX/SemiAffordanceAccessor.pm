@@ -14,7 +14,6 @@ use MooseX::SemiAffordanceAccessor::Role::Attribute;
 # in $p{for_class} later.
 Moose::Exporter->setup_import_methods();
 
-
 sub init_meta
 {
     shift;
@@ -29,7 +28,6 @@ sub init_meta
               ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
             );
 }
-
 
 1;
 
