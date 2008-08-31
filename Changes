@@ -1,7 +1,8 @@
-0.03
+0.03   2008-08-30
 
 - Renamed to MooseX::SemiAffordanceAccessor because it no longer
-  requires the Moose::Policy module.
+  requires the Moose::Policy module. Instead it uses
+  Moose::Util::MetaRole.
 
 
 0.02   2007-11-15
