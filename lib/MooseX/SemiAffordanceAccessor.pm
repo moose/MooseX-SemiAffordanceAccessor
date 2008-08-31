@@ -5,7 +5,7 @@ use warnings;
 
 our $VERSION = '0.03';
 
-use Moose ();
+use Moose 0.5504 ();
 use Moose::Exporter;
 use Moose::Util::MetaRole;
 use MooseX::SemiAffordanceAccessor::Role::Attribute;
