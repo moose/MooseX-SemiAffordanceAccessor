@@ -39,3 +39,35 @@ before '_process_options' => sub
 no Moose::Role;
 
 1;
+
+=head1 NAME
+
+MooseX::SemiAffordanceAccessor::Role::Attribute - Names accessors in a semi-affordance style
+
+=head1 SYNOPSIS
+
+  Moose::Util::MetaRole::apply_metaclass_roles
+      ( for_class => $p{for_class},
+        attribute_metaclass_roles =>
+        ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
+      );
+
+=head1 DESCRIPTION
+
+This role applies a method modifier to the C<_process_options()>
+method, and tweaks the reader and writer parameters so that they
+follow the semi-affordance naming style.
+
+=head1 AUTHOR
+
+Dave Rolsky, C<< <autarch@urth.org> >>
+
+=head1 COPYRIGHT & LICENSE
+
+Copyright 2007-2008 Dave Rolsky, All Rights Reserved.
+
+This program is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself.
+
+=cut
+
