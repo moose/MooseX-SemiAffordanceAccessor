@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 12;
+use Test::More tests => 19;
 
 
 {
@@ -34,6 +34,17 @@ use Test::More tests => 12;
     has '_private' => ( is => 'rw' );
 }
 
+{
+    package SAA3;
+
+    use Moose;
+    use MooseX::SemiAffordanceAccessor;
+
+    has 'ro' => ( is => 'ro' );
+    has 'thing' => ( is => 'rw', reader => 'get_thing' );
+    has 'thing2' => ( is => 'rw', writer => 'set_it' );
+}
+
 
 ok( Standard->can('thing'), 'Standard->thing() exists' );
 ok( ! Standard->can('set_thing'), 'Standard->set_thing() does not exist' );
@@ -49,3 +60,11 @@ ok( SAA2->can('thing'), 'SAA2->thing() exists' );
 ok( SAA2->can('set_thing'), 'SAA2->set_thing() exists' );
 ok( SAA2->can('_private'), 'SAA2->_private() exists' );
 ok( SAA2->can('_set_private'), 'SAA2->_set_private() exists' );
+
+ok( SAA3->can('ro'), 'SAA3->ro exists' );
+ok( ! SAA3->can('set_ro'), 'SAA3->set_ro does not exist' );
+ok( SAA3->can('thing'), 'SAA3->thing exists' );
+ok( ! SAA3->can('set_thing'), 'SAA3->set_thing does not exist' );
+ok( SAA3->can('thing2'), 'SAA3->thing2 exists' );
+ok( ! SAA3->can('set_thing2'), 'SAA3->set_thing2 does not exist' );
+ok( SAA3->can('set_it'), 'SAA3->set_it does exist' );
