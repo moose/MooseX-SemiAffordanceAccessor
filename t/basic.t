@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 19;
+use Test::More tests => 21;
 
 
 {
@@ -45,6 +45,15 @@ use Test::More tests => 19;
     has 'thing2' => ( is => 'rw', writer => 'set_it' );
 }
 
+{
+    package SAA4;
+
+    use Moose;
+    use MooseX::SemiAffordanceAccessor;
+
+    has bare => ( is => 'bare' );
+}
+
 
 ok( Standard->can('thing'), 'Standard->thing() exists' );
 ok( ! Standard->can('set_thing'), 'Standard->set_thing() does not exist' );
@@ -68,3 +77,6 @@ ok( ! SAA3->can('set_thing'), 'SAA3->set_thing does not exist' );
 ok( SAA3->can('thing2'), 'SAA3->thing2 exists' );
 ok( ! SAA3->can('set_thing2'), 'SAA3->set_thing2 does not exist' );
 ok( SAA3->can('set_it'), 'SAA3->set_it does exist' );
+
+ok( ! SAA4->can('bare'), 'SAA4->bare does not exist' );
+ok( ! SAA4->can('set_bare'), 'SAA4->set_bare does not exist' );
