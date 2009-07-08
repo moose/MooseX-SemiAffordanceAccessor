@@ -18,6 +18,7 @@ before '_process_options' => sub
         if ( $options->{is} eq 'ro' )
         {
             $options->{reader} = $name;
+            delete $options->{is};
         }
         elsif ( $options->{is} eq 'rw' )
         {
@@ -30,9 +31,8 @@ before '_process_options' => sub
             }
 
             $options->{writer} = $prefix . q{_} . $name;
+            delete $options->{is};
         }
-
-        delete $options->{is};
     }
 };
 
