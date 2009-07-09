@@ -1,3 +1,10 @@
+0.04   2009-07-09
+
+- This module unconditionally deleted the "is" parameter, which meant
+  it broke any use of "is => 'bare'". Reported by Jerome Quelin. Fixed
+  by Jesse Luehrs. RT #47711.
+
+
 0.03   2008-08-30
 
 - Renamed to MooseX::SemiAffordanceAccessor because it no longer
