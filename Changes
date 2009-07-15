@@ -1,3 +1,8 @@
+0.05   2009-07-15
+
+- Now requires Moose 0.84 to prevent test failures.
+
+
 0.04   2009-07-09
 
 - This module unconditionally deleted the "is" parameter, which meant

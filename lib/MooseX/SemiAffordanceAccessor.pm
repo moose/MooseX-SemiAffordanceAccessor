@@ -3,7 +3,7 @@ package MooseX::SemiAffordanceAccessor;
 use strict;
 use warnings;
 
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 use Moose 0.84 ();
 use Moose::Exporter;
