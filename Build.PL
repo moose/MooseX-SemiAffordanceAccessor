@@ -8,7 +8,7 @@ use Module::Build;
 my $builder = Module::Build->new
     ( module_name        => 'MooseX::SemiAffordanceAccessor',
       license            => 'perl',
-      requires           => { 'Moose' => '0.55_04',
+      requires           => { 'Moose' => '0.84',
                             },
       build_requires     => { 'Test::More' => '0',
                             },
