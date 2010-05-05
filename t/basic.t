@@ -1,7 +1,7 @@
 use strict;
 use warnings;
 
-use Test::More tests => 21;
+use Test::More;
 
 {
 
@@ -84,3 +84,5 @@ ok( SAA3->can('set_it'),      'SAA3->set_it does exist' );
 
 ok( !SAA4->can('bare'),     'SAA4->bare does not exist' );
 ok( !SAA4->can('set_bare'), 'SAA4->set_bare does not exist' );
+
+done_testing();

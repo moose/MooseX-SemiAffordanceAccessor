@@ -12,7 +12,7 @@ my $builder = Module::Build->new(
         'Moose' => '0.84',
     },
     build_requires => {
-        'Test::More' => '0',
+        'Test::More' => '0.88',
     },
     create_makefile_pl => 'passthrough',
     create_readme      => 1,
