@@ -40,11 +40,11 @@ MooseX::SemiAffordanceAccessor::Role::Attribute - Names accessors in a semi-affo
 
 =head1 SYNOPSIS
 
-  Moose::Util::MetaRole::apply_metaclass_roles
-      ( for_class => $p{for_class},
-        attribute_metaclass_roles =>
-        ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
-      );
+  Moose::Util::MetaRole::apply_metaclass_roles(
+      for_class => $p{for_class},
+      attribute_metaclass_roles =>
+          ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
+  );
 
 =head1 DESCRIPTION
 
