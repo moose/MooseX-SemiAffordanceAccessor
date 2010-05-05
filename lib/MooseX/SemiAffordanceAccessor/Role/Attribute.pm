@@ -5,28 +5,22 @@ use warnings;
 
 use Moose::Role;
 
-
-before '_process_options' => sub
-{
+before '_process_options' => sub {
     my $class   = shift;
     my $name    = shift;
     my $options = shift;
 
-    if ( exists $options->{is} &&
-         ! ( exists $options->{reader} || exists $options->{writer} ) )
-    {
-        if ( $options->{is} eq 'ro' )
-        {
+    if ( exists $options->{is}
+        && !( exists $options->{reader} || exists $options->{writer} ) ) {
+        if ( $options->{is} eq 'ro' ) {
             $options->{reader} = $name;
             delete $options->{is};
         }
-        elsif ( $options->{is} eq 'rw' )
-        {
+        elsif ( $options->{is} eq 'rw' ) {
             $options->{reader} = $name;
 
             my $prefix = 'set';
-            if ( $name =~ s/^_// )
-            {
+            if ( $name =~ s/^_// ) {
                 $prefix = '_set';
             }
 

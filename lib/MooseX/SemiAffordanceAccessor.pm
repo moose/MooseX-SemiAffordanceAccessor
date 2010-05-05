@@ -14,19 +14,17 @@ use MooseX::SemiAffordanceAccessor::Role::Attribute;
 # in $p{for_class} later.
 Moose::Exporter->setup_import_methods();
 
-sub init_meta
-{
+sub init_meta {
     shift;
     my %p = @_;
 
     Moose->init_meta(%p);
 
-    return
-        Moose::Util::MetaRole::apply_metaclass_roles
-            ( for_class => $p{for_class},
-              attribute_metaclass_roles =>
-              ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
-            );
+    return Moose::Util::MetaRole::apply_metaclass_roles(
+        for_class => $p{for_class},
+        attribute_metaclass_roles =>
+            ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
+    );
 }
 
 1;
