@@ -17,18 +17,6 @@ use Test::More;
 
     package SAA;
 
-    use MooseX::SemiAffordanceAccessor;
-    use Moose;
-
-    has 'thing'    => ( is => 'rw' );
-    has '_private' => ( is => 'rw' );
-}
-
-{
-
-    package SAA2;
-
-    # Make sure load order doesn't matter
     use Moose;
     use MooseX::SemiAffordanceAccessor;
 
@@ -68,11 +56,6 @@ ok( SAA->can('thing'),        'SAA->thing() exists' );
 ok( SAA->can('set_thing'),    'SAA->set_thing() exists' );
 ok( SAA->can('_private'),     'SAA->_private() exists' );
 ok( SAA->can('_set_private'), 'SAA->_set_private() exists' );
-
-ok( SAA2->can('thing'),        'SAA2->thing() exists' );
-ok( SAA2->can('set_thing'),    'SAA2->set_thing() exists' );
-ok( SAA2->can('_private'),     'SAA2->_private() exists' );
-ok( SAA2->can('_set_private'), 'SAA2->_set_private() exists' );
 
 ok( SAA3->can('ro'),          'SAA3->ro exists' );
 ok( !SAA3->can('set_ro'),     'SAA3->set_ro does not exist' );
