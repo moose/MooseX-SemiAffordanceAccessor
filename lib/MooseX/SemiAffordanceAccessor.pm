@@ -3,7 +3,7 @@ package MooseX::SemiAffordanceAccessor;
 use strict;
 use warnings;
 
-use Moose 0.84 ();
+use Moose 0.94 ();
 use Moose::Exporter;
 use Moose::Util::MetaRole;
 use MooseX::SemiAffordanceAccessor::Role::Attribute;
