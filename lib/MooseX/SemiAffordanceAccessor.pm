@@ -24,8 +24,8 @@ __END__
 
 =head1 SYNOPSIS
 
-    use MooseX::SemiAffordanceAccessor;
     use Moose;
+    use MooseX::SemiAffordanceAccessor;
 
     # make some attributes
 
