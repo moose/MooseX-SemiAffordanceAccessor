@@ -1,3 +1,5 @@
+- Allow MooseX::SemiAffordanceAccessor to be used in roles.
+
 0.08   2010-07-20
 
 - Fix a bad example in the SYNOPSIS.
