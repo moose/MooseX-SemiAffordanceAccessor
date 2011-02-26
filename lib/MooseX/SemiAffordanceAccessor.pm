@@ -12,9 +12,6 @@ my %metaroles = (
     class_metaroles => {
         attribute => ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
     },
-    role_metaroles => {
-        applied_attribute => ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
-    },
 );
 
 $metaroles{role_metaroles} = {
