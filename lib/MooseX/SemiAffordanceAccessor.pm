@@ -54,6 +54,19 @@ attribute, then that attribute's naming scheme is left unchanged.
 The name "semi-affordance" comes from David Wheeler's Class::Meta
 module.
 
+=head1 ACCESSORS IN ROLES
+
+Prior to version 1.9900 of L<Moose>, attributes added to a class ended up with
+that class's attribute traits. That means that if your class used
+C<MooseX::SemiAffordanceAccessor>, any attributes provided by roles you
+consumed had the semi-affordance style of accessor.
+
+As of Moose 1.9900, that is no longer the case. Attributes provided by roles
+no longer acquire the consuming class's attribute traits. However, with Moose
+1.9900+, you can now use C<MooseX::SemiAffordanceAccessor> directly in
+roles. Attributes defined by that role will have semi-affordance style
+accessors, regardless of what attribute traits the consuming class has.
+
 =head1 BUGS
 
 Please report any bugs or feature requests to
