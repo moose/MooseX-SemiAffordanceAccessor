@@ -68,20 +68,4 @@ ok( SAA3->can('set_it'),      'SAA3->set_it does exist' );
 ok( !SAA4->can('bare'),     'SAA4->bare does not exist' );
 ok( !SAA4->can('set_bare'), 'SAA4->set_bare does not exist' );
 
-{
-    package SAA::Role;
-    use Moose::Role;
-    use MooseX::SemiAffordanceAccessor;
-    has foo => (is => 'rw');
-}
-
-{
-    package SAA::WithRole;
-    use Moose;
-    with 'SAA::Role';
-}
-
-ok( SAA::WithRole->can('foo'), "roles work" );
-ok( SAA::WithRole->can('set_foo'), "roles work" );
-
 done_testing();
