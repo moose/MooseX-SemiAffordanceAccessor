@@ -1,4 +1,11 @@
-- Allow MooseX::SemiAffordanceAccessor to be used in roles.
+0.09   2011-02-26
+
+- In Moose 1.9900+, attributes from roles no longer acquire the consuming
+  class's attribute traits. However, you can apply attribute traits like this
+  one to attributes in roles, and that trait is preserved when the role is
+  applied to a class.
+
+  See the documentation for more details.
 
 0.08   2010-07-20
 
