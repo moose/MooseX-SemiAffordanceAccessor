@@ -8,7 +8,7 @@ use Moose::Exporter;
 use Moose::Util::MetaRole;
 use MooseX::SemiAffordanceAccessor::Role::Attribute;
 
-Moose::Exporter->setup_import_methods(
+my %metaroles = (
     class_metaroles => {
         attribute => ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
     },
@@ -16,6 +16,12 @@ Moose::Exporter->setup_import_methods(
         applied_attribute => ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
     },
 );
+
+$metaroles{role_metaroles} = {
+    applied_attribute => ['MooseX::SemiAffordanceAccessor::Role::Attribute'],
+} if $Moose::VERSION >= 1.9900;
+
+Moose::Exporter->setup_import_methods(%metaroles);
 
 1;
 
