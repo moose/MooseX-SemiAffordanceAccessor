@@ -42,6 +42,8 @@ __END__
 
 =head1 SYNOPSIS
 
+=for test_synopsis BEGIN { die 'SKIP: no need to test this'; }
+
   Moose::Util::MetaRole::apply_metaclass_roles(
       for_class => $p{for_class},
       attribute_metaclass_roles =>
