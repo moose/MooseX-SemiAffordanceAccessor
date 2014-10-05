@@ -1,3 +1,5 @@
+{{$NEXT}}
+
 0.09   2011-02-26
 
 - In Moose 1.9900+, attributes from roles no longer acquire the consuming
