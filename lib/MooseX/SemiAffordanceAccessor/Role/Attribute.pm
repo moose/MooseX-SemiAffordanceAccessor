@@ -34,6 +34,12 @@ no Moose::Role;
 
 1;
 
+# ABSTRACT: This meta trait is applied to attributes in order to change writer names
+
+__END__
+
+=pod
+
 =head1 SYNOPSIS
 
   Moose::Util::MetaRole::apply_metaclass_roles(
@@ -49,4 +55,3 @@ method, and tweaks the reader and writer parameters so that they
 follow the semi-affordance naming style.
 
 =cut
-
